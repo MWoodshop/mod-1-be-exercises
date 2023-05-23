@@ -4,5 +4,6 @@ class Customer
   def initialize(name, id)
     @name = name
     @id = id
+    @pets = []
   end
 end
