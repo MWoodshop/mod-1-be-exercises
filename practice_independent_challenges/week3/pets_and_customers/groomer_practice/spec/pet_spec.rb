@@ -19,6 +19,13 @@ RSpec.describe Customer do
         samson = Pet.new({ name: 'Samson', type: :dog, age: 3 })
         expect(samson.fed?).to eq(false)
       end
+      it 'feed method returns true' do
+        samson = Pet.new({ name: 'Samson', type: :dog, age: 3 })
+        expect(samson.fed?).to eq(false)
+        samson.feed
+
+        expect(samson.fed?).to eq(true)
+      end
     end
   end
 end
