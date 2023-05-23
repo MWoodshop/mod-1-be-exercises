@@ -27,5 +27,13 @@ RSpec.describe Customer do
       joel.adopt(lucy)
       expect(joel.pets).to include(@name = lucy)
     end
+
+    describe 'charge and payment for pets' do
+      it 'customer created with a 0 oustanding_balance' do
+        joel = Customer.new('Joel', 2)
+
+        expect(joel.outstanding_balance).to eq(0)
+      end
+    end
   end
 end
