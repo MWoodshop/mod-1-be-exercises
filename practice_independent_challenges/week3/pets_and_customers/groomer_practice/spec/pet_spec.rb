@@ -13,5 +13,12 @@ RSpec.describe Customer do
       expect(samson.type).to eq(:dog)
       expect(samson.age).to eq(3)
     end
+
+    describe 'feed' do
+      it 'starts with fed as false' do
+        samson = Pet.new({ name: 'Samson', type: :dog, age: 3 })
+        expect(samson.fed?).to eq(false)
+      end
+    end
   end
 end
