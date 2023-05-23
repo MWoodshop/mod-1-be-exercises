@@ -6,4 +6,9 @@ class Customer
     @id = id
     @pets = []
   end
+
+  # adopt method assigns the pet specified to the @pets array of the customer specified.
+  def adopt(pet)
+    @pets << pet
+  end
 end
