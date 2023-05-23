@@ -1,5 +1,6 @@
 require 'spec_helper'
-RSpec.describe Customer do
+RSpec.describe Pet do
+  # Iteration 1
   describe 'initialize' do
     it 'can initialize' do
       samson = Pet.new({ name: 'Samson', type: :dog, age: 3 })

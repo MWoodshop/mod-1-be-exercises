@@ -11,6 +11,7 @@ RSpec.describe Customer do
 
       expect(joel.name).to eq('Joel')
       expect(joel.id).to eq(2)
+      expect(joel.pets).to eq([])
     end
   end
 end
