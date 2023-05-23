@@ -14,4 +14,18 @@ RSpec.describe Customer do
       expect(joel.pets).to eq([])
     end
   end
+
+  describe 'can adopt' do
+    it 'create pets and adopt' do
+      joel = Customer.new('Joel', 2)
+      samson = Pet.new({ name: 'Samson', type: :dog, age: 3 })
+      lucy = Pet.new({ name: 'Lucy', type: :cat, age: 12 })
+
+      joel.adopt(samson)
+      expect(joel.pets).to include(@name = samson)
+
+      joel.adopt(lucy)
+      expect(joel.pets).to include(@name = lucy)
+    end
+  end
 end
