@@ -34,6 +34,14 @@ RSpec.describe Customer do
 
         expect(joel.outstanding_balance).to eq(0)
       end
+      joel = Customer.new('Joel', 2)
+      it 'can charge' do
+        joel.charge(15)
+        expect(joel.outstanding_balance).to eq(15)
+
+        joel.charge(7)
+        expect(joel.outstanding_balance).to eq(22)
+      end
     end
   end
 end
