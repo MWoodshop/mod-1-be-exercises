@@ -6,5 +6,11 @@ RSpec.describe Customer do
       joel = Customer.new('Joel', 2)
       expect(joel).to be_a(Customer)
     end
+    it 'stores data correctly' do
+      joel = Customer.new('Joel', 2)
+
+      expect(joel.name).to eq('Joel')
+      expect(joel.id).to eq(2)
+    end
   end
 end
