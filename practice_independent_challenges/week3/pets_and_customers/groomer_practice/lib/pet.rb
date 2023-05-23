@@ -1,7 +1,9 @@
 class Pet
-  attr_reader :data
+  attr_reader :name, :type, :age
 
   def initialize(data)
-    @data = data
+    @name = data[:name]
+    @type = data[:type]
+    @age = data[:age]
   end
 end
